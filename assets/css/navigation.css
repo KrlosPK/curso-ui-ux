@@ -1,0 +1,15 @@
+.navigation {
+  background-color: #010409;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navigation__list {
+  display: flex;
+  gap: 1rem;
+  margin: auto;
+  max-width: 1440px;
+  padding: 1rem;
+  justify-content: center;
+}

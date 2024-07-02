@@ -1,0 +1,62 @@
+:root {
+  --skills-length: 20;
+  --skill-width: 128px;
+  --translate-x: calc(-128px * var(--skills-length) / 2);
+}
+
+.technologies {
+  overflow: hidden;
+  position: relative;
+}
+
+.tech__list {
+  animation: slide 25s linear infinite;
+  display: flex;
+  gap: 1rem;
+  margin-block: 2.5rem;
+  width: calc(var(--skill-width) * var(--skills-length));
+}
+
+.tech__list:hover {
+  animation-play-state: paused;
+}
+
+.technologies::before,
+.technologies::after {
+  content: '';
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 8rem;
+  z-index: 10;
+}
+.technologies::before {
+  background: linear-gradient(to right, #111222 0%, transparent 100%);
+  left: 0px;
+}
+.technologies::after {
+  background: linear-gradient(to left, #111222 0%, transparent 100%);
+  right: 0px;
+}
+
+.tech__item {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: var(--skill-width);
+}
+
+.tech__text {
+  font-weight: bold;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(var(--translate-x));
+  }
+}

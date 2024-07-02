@@ -1,0 +1,50 @@
+.about {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.username {
+  background-clip: text;
+  background-image: linear-gradient(to right, var(--blue-color), var(--cyan-color));
+  color: transparent;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.job-title {
+  color: var(--accent-color);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.description {
+  margin-bottom: 0.5rem;
+  max-width: 75ch;
+}
+
+.call-to-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+
+  & a {
+    background-color: var(--accent-color);
+    border-radius: 4px;
+    color: #000;
+    font-weight: 600;
+    padding: 0.6rem 1rem;
+  }
+}
+
+.personal-image {
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    align-items: center;
+    flex-direction: column;
+  }
+}
